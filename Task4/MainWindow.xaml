@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:Task4"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel Margin="100" VerticalAlignment="Center">
+        <CheckBox x:Name="AgreementCheckBox" Content="Согласен с условиями использования"/>
+        <Button x:Name="RegistrationButton" Content="Зарегестрироваться">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=AgreementCheckBox, Path=IsChecked}" Value="False">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </StackPanel>
 </Window>
