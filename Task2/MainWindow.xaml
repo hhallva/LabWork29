@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Task2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="firstButton" Content="Кнопка 1"/>
+        <Button x:Name="secondButton" Content="Кнопка 2"/>
+        <Button x:Name="thirdButton" Content="Кнопка 3"/>
+    </StackPanel>
 </Window>
